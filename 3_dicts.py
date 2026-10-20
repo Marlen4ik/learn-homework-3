@@ -6,36 +6,26 @@
 """
 
 
-def describe_client(client: dict) -> str:
+def describe_client(client):
     """Верни строку "Анна, 25 лет, город: Москва".
     Обязательные ключи: name, age. Если city отсутствует, используй "не указан".
     """
-    if client.get('city') is None:
-        return f'{client.get('name')}, {client.get('age')} лет, город: не указан'
-    return f'{client.get('name')}, {client.get('age')} лет, город: {client.get('city')}'
+    pass
 
-from collections import Counter
 
-def count_by_city(clients: list[dict]) -> dict:
+def count_by_city(clients):
     """Верни словарь: город -> число клиентов.
     У всех клиентов здесь есть ключ city.
     Для пустого списка верни {}. Исходные данные не изменяй.
     """
-    client_count: dict = {}
-    if clients:
-        for d in clients:
-            if (c:=d.get('city')) in client_count:
-                client_count[c] += 1
-            else:
-                client_count[c] = 1
-    return client_count
+    pass
 
 
-def get_departed_names(clients: list[dict]) -> list[str | None]:
+def get_departed_names(clients):
     """Верни список имён клиентов с churn == 0 в исходном порядке.
     У каждого клиента есть name и churn. Для пустого списка верни [].
     """
-    return [x.get('name') for x in clients if x.get('churn')==0]
+    pass
 
 
 def main():

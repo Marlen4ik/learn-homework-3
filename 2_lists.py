@@ -6,28 +6,27 @@
 """
 
 
-def filter_scores(scores: list, minimum: int = 60) -> list:
+def filter_scores(scores, minimum=60):
     """Верни новый список значений >= minimum, сохранив порядок.
     filter_scores([40, 60, 90, 55]) -> [60, 90]
     """
-    return [num for num in scores if num >= minimum]
+    pass
 
-from collections import Counter
 
-def unique_in_order(values: list) -> dict:
+def unique_in_order(values):
     """Верни элементы без повторов в порядке первого появления.
     unique_in_order(["a", "b", "a", "c"]) -> ["a", "b", "c"]
     """
-    return Counter(values)
+    pass
 
 
-def summarize_numbers(numbers: list):
+def summarize_numbers(numbers):
     """Верни словарь с ключами count, total, average.
     Для пустого списка: {"count": 0, "total": 0, "average": None}.
     summarize_numbers([2, 4, 6]) -> {"count": 3, "total": 12, "average": 4.0}
     """
-    if len(numbers)==3: return {'count': len(numbers), 'total': sum(numbers), 'average': sum(numbers)/len(numbers)}
-    return {}
+    pass
+
 
 def main():
     print("Проходные баллы:", filter_scores([40, 60, 90, 55]))
